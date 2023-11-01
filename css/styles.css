@@ -90,18 +90,13 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 }
 
 .bloquePrd{
-    font-size: 1.5rem;
+    font-size: 25px;
 }
 
 .bloqueHistoria{
     background-color: rgb(18, 106, 184);
     width: 100%;
     height: 50vh;
-}
-
-.divForm{
-    background-color: rgb(39, 90, 19);
-    height: 40vh;
 }
 
 #divMosaicos{
@@ -131,4 +126,56 @@ border-radius: 0px 0px 27px 0px;
     box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
 -webkit-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
 -moz-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+}
+
+.divForm{
+    background-color: rgb(39, 90, 19);
+    font-size: 25px;
+}
+
+.containerForm{
+    display: flex;
+    justify-content: center;
+}
+
+.containerForm form{
+    border: 1px solid black;
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+input{
+    border: 0;
+    width: 300px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px 4px 4px 4px;
+-webkit-border-radius: 4px 4px 4px 4px;
+-moz-border-radius: 4px 4px 4px 4px;
+font-family: 'Agdasima', sans-serif;
+}
+
+textarea{
+    resize: none;
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px 4px 4px 4px;
+-webkit-border-radius: 4px 4px 4px 4px;
+-moz-border-radius: 4px 4px 4px 4px;
+font-family: 'Agdasima', sans-serif;
+}
+
+#btnEnviar:hover{
+    cursor: pointer;
+    box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
 }
