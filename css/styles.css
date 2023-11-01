@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    margin: 0 75px;
+    font-family: 'Agdasima', sans-serif;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+div{
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+header{
+    position: sticky;
+    background-color: aliceblue;
+    top: 0;
+    z-index: 10;
+}
+
+.divHeader{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.titulosHead{
+    width: 40%;
+    font-size: 1.75rem;
+}
+
+.navHead{
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.btnNav{
+    width: 30%;
+    text-align: center;
+    border-right: 1px solid #ff6550;
+border-bottom: 1px solid #ff6550;
+border-left: 1px solid #ff6550;
+border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+-webkit-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+-moz-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+}
+
+.btnNav:hover{
+    transform: translateY(-5px);
+}
+
+.btnWpp{
+    position: fixed;
+    right: 20px;
+    top: 80%;
+    width: 75px;
+    height: 75px;
+}
+
+#logoWpp{
+    width: 100%;
+    height: 100%;
+}
+
+.bloqueGaleria{
+    background-color: rgb(18, 106, 184);
+    width: 100%;
+    height: 70vh;
+}
+
+.bloquePrd{
+    font-size: 1.5rem;
+}
+
+.bloqueHistoria{
+    background-color: rgb(18, 106, 184);
+    width: 100%;
+    height: 50vh;
+}
+
+.divForm{
+    background-color: rgb(39, 90, 19);
+    height: 40vh;
+}
+
+#divMosaicos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.mosaicoHover{
+    width: 320px;
+    background-color: beige;
+    text-align: center;
+    box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+border-radius: 0px 0px 27px 0px;
+-webkit-border-radius: 0px 0px 27px 0px;
+-moz-border-radius: 0px 0px 27px 0px;
+}
+
+.mosaicoHover:hover{
+    transform: rotate(2deg)
+		perspective(1000px)
+		scale(1.1);
+	transform-origin: center center;
+    transition: 100ms;
+    box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+-webkit-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+-moz-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+}
