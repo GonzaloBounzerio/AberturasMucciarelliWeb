@@ -54,11 +54,15 @@ header{
 
 .btnNav{
     width: 30%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-right: 1px solid #ff6550;
-border-bottom: 1px solid #ff6550;
-border-left: 1px solid #ff6550;
-border-radius: 10px 10px 10px 10px;
+    border-bottom: 1px solid #ff6550;
+    border-left: 1px solid #ff6550;
+    border-radius: 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
