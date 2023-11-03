@@ -192,6 +192,7 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 }
 
 input{
+    border: 0.5px solid black;
     background-color: rgb(179, 255, 255);
     border: 0;
     width: 300px;
