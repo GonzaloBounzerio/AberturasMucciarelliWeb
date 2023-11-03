@@ -18,27 +18,39 @@ a{
 }
 
 div{
-    border: 1px solid black;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 header{
+    height: 15vh;
     position: sticky;
     background-color: aliceblue;
     top: 0;
     z-index: 10;
+    box-shadow: 0px 3px 0px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 3px 0px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 0px -1px rgba(0,0,0,0.75);
+border-radius: 0px 0px 22px 22px;
+-webkit-border-radius: 0px 0px 22px 22px;
+-moz-border-radius: 0px 0px 22px 22px;
 }
 
 .divHeader{
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.divMain{
+    padding: 1rem;
 }
 
 
 .titulosHead{
     width: 40%;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .navHead{
@@ -54,16 +66,20 @@ header{
 
 .btnNav{
     width: 30%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-right: 1px solid #ff6550;
-border-bottom: 1px solid #ff6550;
-border-left: 1px solid #ff6550;
-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
--webkit-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
--moz-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+    border-bottom: 1px solid #ff6550;
+    border-left: 1px solid #ff6550;
+    border-radius: 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .btnNav:hover{
@@ -83,10 +99,33 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
     height: 100%;
 }
 
+#logoWpp:hover{
+    transform: translateY(-10px);
+    transition: 100ms;
+    
+}
+
 .bloqueGaleria{
-    background-color: rgb(18, 106, 184);
+    border: 19px solid rgba(147, 250, 186, 0.212);;
+    margin-bottom: 20px;
     width: 100%;
     height: 70vh;
+    animation: animate 10s infinite;
+}
+
+@keyframes animate{
+    20%{
+        background-image: url(/assets/img/headerBackProvisorio.jpg);
+        background-size:cover;
+    }
+    70%{
+        background-image:url(/assets/img/tecnologia2.jpg) ;
+        background-size: cover;
+    }
+    100%{
+        background-image: url(/assets/img/plegables1.jpg);
+        background-size: cover;
+    }
 }
 
 .bloquePrd{
@@ -110,26 +149,25 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
     background-color: beige;
     text-align: center;
     box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
-border-radius: 0px 0px 27px 0px;
--webkit-border-radius: 0px 0px 27px 0px;
--moz-border-radius: 0px 0px 27px 0px;
+    -webkit-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+    border-radius: 0px 0px 27px 0px;
+    -webkit-border-radius: 0px 0px 27px 0px;
+    -moz-border-radius: 0px 0px 27px 0px;
 }
 
 .mosaicoHover:hover{
-    transform: rotate(2deg)
-		perspective(1000px)
-		scale(1.1);
+    transform: rotate(2deg);
+	perspective:(1000px);
+	scale:(1.1);
 	transform-origin: center center;
     transition: 100ms;
     box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
--webkit-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
--moz-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+    -moz-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
 }
 
 .divForm{
-    background-color: rgb(39, 90, 19);
     font-size: 25px;
 }
 
@@ -139,28 +177,33 @@ border-radius: 0px 0px 27px 0px;
 }
 
 .containerForm form{
-    border: 1px solid black;
+    background-color: rgba(147, 250, 186, 0.212);
     padding: 20px;
-    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
 }
 
 input{
+    background-color: rgb(179, 255, 255);
     border: 0;
     width: 300px;
     font-size: 20px;
     margin: 10px;
     padding: 10px;
     border-radius: 4px 4px 4px 4px;
--webkit-border-radius: 4px 4px 4px 4px;
--moz-border-radius: 4px 4px 4px 4px;
-font-family: 'Agdasima', sans-serif;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    font-family: 'Agdasima', sans-serif;
+    border: 0.5px solid black;
 }
 
 textarea{
+    border: 0.5px solid black;
+    background-color: rgb(179, 255, 255);
     resize: none;
     width: 300px;
     height: 100px;
@@ -168,14 +211,42 @@ textarea{
     margin: 10px;
     padding: 10px;
     border-radius: 4px 4px 4px 4px;
--webkit-border-radius: 4px 4px 4px 4px;
--moz-border-radius: 4px 4px 4px 4px;
-font-family: 'Agdasima', sans-serif;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    font-family: 'Agdasima', sans-serif;
 }
 
 #btnEnviar:hover{
     cursor: pointer;
     box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+}
+
+.subtitulo{
+    position: absolute;
+    font-size: 30px;
+    background-color:rgba(255, 230, 86, 0.678) ;
+    left: 0;
+    width: 350px;
+    text-align: right;
+    animation: expand 7s infinite;
+}
+
+@keyframes expand{
+    20%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(0.5);
+    }
+    60%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }

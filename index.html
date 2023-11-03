@@ -8,45 +8,48 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
         <div class="divHeader">
             <div class="titulosHead">
                 <h1>Aberturas Mucciarelli</h1>
-                <h3>Desde 1964</h3>
             </div>
             <div class="navHead">
-                <a id="btnNav2" class="btnNav" href="">Nuestros Productos</a>
-                <a id="btnNav1" class="btnNav" href="">Sobre Nosotros</a>
-                <a id="btnNav3" class="btnNav" href="">Contáctenos</a>
+                <a id="btnNav2" class="btnNav" href="#productsDiv">Nuestros Productos</a>
+                <a id="btnNav1" class="btnNav" href="#historyDiv">Sobre Nosotros</a>
+                <a id="btnNav3" class="btnNav" href="#contactDiv">Contáctenos</a>
             </div>
         </div>
     </header>
     <main>
         <div class="divMain">
             <div class="divGaleria">
-                <div class="bloqueGaleria">Galeria con scroll</div>
+                <div class="bloqueGaleria">
+                    <!-- aca irian las imagenes automaticas del slider -->
+                </div>
             </div>
-            <div class="divProd">
+            <div id="productsDiv"  class="divProd">
                 <div class="bloquePrd">
-                    <h2>Nuestros productos...</h2>
+                    <h2 class="subtitulo">Nuestros productos...</h2>
                     <div id="divMosaicos">
                         <!-- aca van algunos productos -->
                     </div>
                 </div>
             </div>
-            <div class="divHistoria">
-                <div class="bloqueHistoria">Breve historia de Abel y como comenzó</div>
+            <div id="historyDiv" class="divHistoria">
+                <div class="bloqueHistoria">
+                    <h2 class="subtitulo">Un poco de nosotros...</h2>
+                </div>
             </div>
             <div class="btnWpp">
                 <a href="https://api.whatsapp.com/send/?phone=5492236887474&text=Hola,%20quería%20información%20acerca%20de%20sus%20productos.%20Me%20redirijo%20de%20la%20pagina%20web." target="_blank">
                     <span id="logoWpp" class="iconify" data-icon="logos:whatsapp-icon"></span>
                 </a>
             </div>
-            <div class="divForm">
-                <h2>Consúltenos</h2>
+            <div id="contactDiv" class="divForm">
+                <h2 class="subtitulo">Consúltenos...</h2>
                 <div class="containerForm">
                     <form action="">
                         <input type="text" name="nombre" placeholder="Nombre y Apellido">
@@ -55,9 +58,6 @@
                         <input id="btnEnviar" type="submit">
                     </form>
                 </div>
-            </div>
-            <div class="divSliderAuto">
-
             </div>
         </div>
     </main>
@@ -69,7 +69,7 @@
         </div>
     </footer>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
 
