@@ -35,6 +35,10 @@ header{
     justify-content: space-around;
 }
 
+.divMain{
+    padding: 1rem;
+}
+
 
 .titulosHead{
     width: 40%;
@@ -63,11 +67,11 @@ header{
     border-bottom: 1px solid #ff6550;
     border-left: 1px solid #ff6550;
     border-radius: 10px;
--webkit-border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
--webkit-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
--moz-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 }
 
 .btnNav:hover{
@@ -114,22 +118,22 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
     background-color: beige;
     text-align: center;
     box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
-border-radius: 0px 0px 27px 0px;
--webkit-border-radius: 0px 0px 27px 0px;
--moz-border-radius: 0px 0px 27px 0px;
+    -webkit-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 8px -3px rgba(0,0,0,0.75);
+    border-radius: 0px 0px 27px 0px;
+    -webkit-border-radius: 0px 0px 27px 0px;
+    -moz-border-radius: 0px 0px 27px 0px;
 }
 
 .mosaicoHover:hover{
-    transform: rotate(2deg)
-		perspective(1000px)
-		scale(1.1);
+    transform: rotate(2deg);
+	perspective:(1000px);
+	scale:(1.1);
 	transform-origin: center center;
     transition: 100ms;
     box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
--webkit-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
--moz-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
+    -moz-box-shadow: 0px 14px 78px 19px rgba(0,0,0,0.83);
 }
 
 .divForm{
@@ -159,9 +163,9 @@ input{
     margin: 10px;
     padding: 10px;
     border-radius: 4px 4px 4px 4px;
--webkit-border-radius: 4px 4px 4px 4px;
--moz-border-radius: 4px 4px 4px 4px;
-font-family: 'Agdasima', sans-serif;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    font-family: 'Agdasima', sans-serif;
 }
 
 textarea{
@@ -172,14 +176,14 @@ textarea{
     margin: 10px;
     padding: 10px;
     border-radius: 4px 4px 4px 4px;
--webkit-border-radius: 4px 4px 4px 4px;
--moz-border-radius: 4px 4px 4px 4px;
-font-family: 'Agdasima', sans-serif;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    font-family: 'Agdasima', sans-serif;
 }
 
 #btnEnviar:hover{
     cursor: pointer;
     box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 17px 0px rgba(0,0,0,0.75);
 }

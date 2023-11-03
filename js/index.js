@@ -1,3 +1,5 @@
+//Al hacer click en btnNavbar que tenga en cuenta el alto de la NavBar para que no tape los divs apuntados.
+window.addEventListener("hashchange", function() { scrollBy(0, -100) })
 
 class dataMosaico {
     constructor(id,title,image,imageHover){
