@@ -47,6 +47,10 @@ border-radius: 0px 0px 22px 22px;
     padding: 1rem;
 }
 
+.divMain{
+    padding: 1rem;
+}
+
 
 .titulosHead{
     width: 40%;
@@ -72,14 +76,14 @@ border-radius: 0px 0px 22px 22px;
     justify-content: center;
     text-align: center;
     border-right: 1px solid #ff6550;
-    border-bottom: 1px solid #ff6550;
-    border-left: 1px solid #ff6550;
-    border-radius: 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+border-bottom: 1px solid #ff6550;
+border-left: 1px solid #ff6550;
+border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+-webkit-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
+-moz-box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 }
 
 .btnNav:hover{
@@ -195,10 +199,9 @@ input{
     margin: 10px;
     padding: 10px;
     border-radius: 4px 4px 4px 4px;
-    -webkit-border-radius: 4px 4px 4px 4px;
-    -moz-border-radius: 4px 4px 4px 4px;
-    font-family: 'Agdasima', sans-serif;
-    border: 0.5px solid black;
+-webkit-border-radius: 4px 4px 4px 4px;
+-moz-border-radius: 4px 4px 4px 4px;
+font-family: 'Agdasima', sans-serif;
 }
 
 textarea{
