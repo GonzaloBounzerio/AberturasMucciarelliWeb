@@ -119,15 +119,15 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 
 @keyframes animate{
     20%{
-        background-image: url(/assets/img/headerBackProvisorio.jpg);
+        background-image: url(../assets/img/plegables2.jpg);
         background-size:cover;
     }
     70%{
-        background-image:url(/assets/img/tecnologia2.jpg) ;
+        background-image:url(..//assets/img/headerBackProvisorio.jpg) ;
         background-size: cover;
     }
     100%{
-        background-image: url(/assets/img/plegables1.jpg);
+        background-image: url(../assets/img/tecnologia2.jpg);
         background-size: cover;
     }
 }
