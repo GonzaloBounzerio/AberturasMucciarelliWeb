@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aberturas Mucciarelli</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -41,14 +38,19 @@
                     <h2 class="subtitulo">Nuestra historia...</h2>
                 </div>
             </div>
-            <div class="btnWpp">
+            <!-- <div class="btnWpp">
                 <a href="https://api.whatsapp.com/send/?phone=5492236887474&text=Hola,%20quería%20información%20acerca%20de%20sus%20productos.%20Me%20redirijo%20de%20la%20pagina%20web." target="_blank">
                     <span id="logoWpp" class="iconify" data-icon="logos:whatsapp-icon"></span>
                 </a>
-            </div>
-            <div id="contactDiv" class="divForm">
-                <h2 class="subtitulo">Consúltenos</h2>
+            </div> -->
+            <!-- <div id="contactDiv" class="divForm">
+                <h2 class="subtitulo">Consúltenos...</h2>
                 <div class="containerForm">
+                    <div class="textoConsulta">
+                        <p>
+                            Escríbenos por Whtasapp o mandanos un mail para que podamos responder todas tus consultas y/o analizar un presupuesto a tu medida
+                        </p>
+                    </div>
                     <form onsubmit="return false">
                         <input type="text" name="nombre" placeholder="Nombre y Apellido">
                         <input type="email" name="mail" placeholder="Correo electrónico">
@@ -58,6 +60,30 @@
                     <div class="contactButtons">
                         <button id="wppBtn"><a href="https://api.whatsapp.com/send/?phone=5492236887474&text=Hola,%20quería%20información%20acerca%20de%20sus%20productos.%20Me%20redirijo%20de%20la%20pagina%20web." target="_blank"><img src="./assets/img/whatsa.png"/></a></button>
                         <button id="gmailBtn"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bounzeriog@gmail.com&su=Consulta Mucciarelli&body=Consulta...&bcc=taliercioluis1@gmail.com'" target="_blank"><img src="./assets/img/gmail.png"/></a></button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div id="popUpConsultas">
+            <div class="containerPopUp">
+                <div id="btnCierraPopUp">
+                    <span class="iconify btnClose" data-icon="zondicons:close-outline" style="font-size: 258px;"></span>
+                </div>
+                <div class="textoConsulta">
+                    <p>
+                        Escribinos por Whtasapp o mandanos un mail para que podamos responder todas tus consultas y/o analizar un presupuesto a tu medida
+                    </p>
+                </div>
+                <div class="divBtnsPopUp">
+                    <div class="btnPopUp">
+                        <a href="https://api.whatsapp.com/send/?phone=5492236887474&text=Hola,%20quería%20información%20acerca%20de%20sus%20productos.%20Me%20redirijo%20de%20la%20pagina%20web." target="_blank">
+                            <span class="iconify logoMove" data-icon="logos:whatsapp-icon"style="font-size: 258px;"></span>
+                        </a>
+                    </div>
+                    <div class="btnPopUp">
+                        <a href="" target="_blank">
+                            <span class="iconify logoMove" data-icon="logos:google-gmail" style="font-size: 258px;"></span>
+                        </a>
                     </div>
                 </div>
             </div>

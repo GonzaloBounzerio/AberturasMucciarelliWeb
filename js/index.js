@@ -53,25 +53,40 @@ for (let data of arrayMosaicos){
     divMosaico.appendChild(mosaicoNuevo)
 }
 
-const sendContact = async() =>{
+// const sendContact = async() =>{
     
-    let nombre = document.getElementsByName("nombre")[0];
-    let mail = document.getElementsByName("mail")[0];
-    let consulta = document.getElementsByName("consulta")[0];
-    if(!nombre.value || !mail.value || !consulta.value){
-        [nombre,mail,consulta].forEach((input) =>{
-            if (!input.value){
-                input.style.border = "4px solid red"
-                setTimeout(()=>{
-                    input.style.border = "2px solid black"
-                },3000);
-            } 
-        });
-        return;
-    }
-    //window.open('https://mail.google.com/mail/u/0/#inbox?compose=new');
-    //window.open('https://mail.google.com/mail/?view=cm&fs=1&to=bounzeriog@gmail.com&su=Consulta Mucciarelli&body='+consulta.value+'&bcc=taliercioluis1@gmail.com');
+//     let nombre = document.getElementsByName("nombre")[0];
+//     let mail = document.getElementsByName("mail")[0];
+//     let consulta = document.getElementsByName("consulta")[0];
+//     if(!nombre.value || !mail.value || !consulta.value){
+//         [nombre,mail,consulta].forEach((input) =>{
+//             if (!input.value){
+//                 input.style.border = "4px solid red"
+//                 setTimeout(()=>{
+//                     input.style.border = "2px solid black"
+//                 },3000);
+//             } 
+//         });
+//         return;
+//     }
+//     //window.open('https://mail.google.com/mail/u/0/#inbox?compose=new');
+//     //window.open('https://mail.google.com/mail/?view=cm&fs=1&to=bounzeriog@gmail.com&su=Consulta Mucciarelli&body='+consulta.value+'&bcc=taliercioluis1@gmail.com');
     
-    console.log(nombre,mail,consulta);
+//     console.log(nombre,mail,consulta);
 
+// }
+
+
+let btnConsultas = document.getElementById("btnNav3")
+let popUp = document.getElementById("popUpConsultas")
+let btnCierraPopUp = document.getElementById("btnCierraPopUp")
+btnConsultas.onclick = () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+    popUp.style.visibility=("visible")
+}
+btnCierraPopUp.onclick = () => {
+    popUp.style.visibility=("hidden")
 }

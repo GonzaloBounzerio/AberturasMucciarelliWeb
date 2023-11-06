@@ -98,7 +98,7 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 }
 
 .btnNav:hover{
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .btnWpp{
@@ -270,20 +270,59 @@ textarea{
     border-top-right-radius: 10px;
 }
 
-/*@keyframes expand{
-    20%{
-        transform: scale(1);
-    }
-    60%{
-        transform: scale(0.5);
-    }
-    60%{
-        transform: scale(1);
-    }
-    80%{
-        transform: scale(0.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-}*/
+.textoConsulta{
+    font-size: 20px;
+    padding: 30px;
+}
+
+#popUpConsultas{
+    position: absolute;
+    top: 100px;
+    visibility: hidden;
+}
+
+.containerPopUp{
+    background-color: #ff6550;
+    padding: 1px;
+    width: 30vw;
+    height: 40vh;
+    border-radius: 53px 10px 66px 10px;
+    -webkit-border-radius: 53px 10px 66px 10px;
+    -moz-border-radius: 53px 10px 66px 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+
+}
+
+.btnPopUp{
+    width: 90px;
+    height: 50px;
+}
+
+.logoMove{
+    height: 100%;
+    width: 100%;
+}
+
+.logoMove:hover{
+    transform: translateY(-3px);
+}
+
+.divBtnsPopUp{
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#btnCierraPopUp{
+    height: 30px;
+    cursor: pointer;
+}
+
+.btnClose{
+    width: 100%;
+    height: 100%;
+}
+
