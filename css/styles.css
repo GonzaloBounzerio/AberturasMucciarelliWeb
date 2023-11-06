@@ -37,6 +37,17 @@ border-radius: 0px 0px 22px 22px;
 }
 
 .divHeader{
+    height: 15vh;
+    position: sticky;
+    background-color: aliceblue;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 3px 0px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 3px 0px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 0px -1px rgba(0,0,0,0.75);
+border-radius: 0px 0px 22px 22px;
+-webkit-border-radius: 0px 0px 22px 22px;
+-moz-border-radius: 0px 0px 22px 22px;
     margin: 0;
     display: flex;
     justify-content:space-around;
@@ -120,14 +131,17 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 @keyframes animate{
     20%{
         background-image: url(../assets/img/plegables2.jpg);
-        background-size:cover;
+        background-position: center;
+        background-size: cover;
     }
     70%{
         background-image:url(..//assets/img/headerBackProvisorio.jpg) ;
+        background-position: center;
         background-size: cover;
     }
     100%{
         background-image: url(../assets/img/tecnologia2.jpg);
+        background-position: center;
         background-size: cover;
     }
 }
@@ -178,6 +192,8 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 .containerForm{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .containerForm form{
@@ -191,22 +207,19 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 -moz-border-radius: 10px 10px 10px 10px;
 }
 
-input{
-    border: 0.5px solid black;
+.containerForm form input{
+    border: 2px solid black;
     background-color: rgb(179, 255, 255);
-    border: 0;
     width: 300px;
     font-size: 20px;
     margin: 10px;
     padding: 10px;
-    border-radius: 4px 4px 4px 4px;
--webkit-border-radius: 4px 4px 4px 4px;
--moz-border-radius: 4px 4px 4px 4px;
-font-family: 'Agdasima', sans-serif;
+    border-radius: 4px;
+    font-family: 'Agdasima', sans-serif;
 }
 
 textarea{
-    border: 0.5px solid black;
+    border: 2px solid black;
     background-color: rgb(179, 255, 255);
     resize: none;
     width: 300px;
@@ -234,10 +247,30 @@ textarea{
     left: 0;
     width: 350px;
     text-align: right;
-    animation: expand 7s infinite;
 }
 
-@keyframes expand{
+.contactButtons {
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+}
+.contactButtons button{
+    padding: 0.25rem 0.5rem;
+    border: 2px solid black;
+}
+.contactButtons button img{
+    width: 50px;
+}
+#wppBtn{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#gmailBtn{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*@keyframes expand{
     20%{
         transform: scale(1);
     }
@@ -253,4 +286,4 @@ textarea{
     100%{
         transform: scale(1);
     }
-}
+}*/
