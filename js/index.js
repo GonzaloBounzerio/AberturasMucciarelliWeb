@@ -15,7 +15,7 @@ const item2 = new dataMosaico(2,"Puertas de aluminio","assets/img/puertas1.jpg",
 const item3 = new dataMosaico(3,"Tecnología","assets/img/tecnologia1.jpg","assets/img/tecnologia2.jpg")
 const item4 = new dataMosaico(4,"Seguridad","assets/img/seguridad1.jpg","assets/img/seguridad2.png")
 const item5 = new dataMosaico(5,"Aberturas de madera","assets/img/maderas1.jpg","assets/img/maderas2.jpg")
-const item6 = new dataMosaico(6,"Y muchos productos más...","assets/img/plegables1.jpg","assets/img/plegables2.jpg")
+const item6 = new dataMosaico(6,"Y mucho más...","assets/img/plegables1.jpg","assets/img/plegables2.jpg")
 
 let arrayMosaicos=[]
 
