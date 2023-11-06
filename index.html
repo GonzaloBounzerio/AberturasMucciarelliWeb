@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header>
         <div class="divHeader">
             <div class="titulosHead">
                 <h1>Aberturas Mucciarelli</h1>
@@ -22,7 +21,6 @@
                 <a id="btnNav3" class="btnNav" href="#contactDiv">Contáctenos</a>
             </div>
         </div>
-    </header>
     <main>
         <div class="divMain">
             <div class="divGaleria">
@@ -51,12 +49,16 @@
             <div id="contactDiv" class="divForm">
                 <h2 class="subtitulo">Consúltenos</h2>
                 <div class="containerForm">
-                    <form action="">
+                    <form onsubmit="return false">
                         <input type="text" name="nombre" placeholder="Nombre y Apellido">
                         <input type="email" name="mail" placeholder="Correo electrónico">
                         <textarea name="consulta" placeholder="Consulta"></textarea >
-                        <input id="btnEnviar" type="submit">
+                        <input id="btnEnviar" type="submit" onclick="sendContact()">
                     </form>
+                    <div class="contactButtons">
+                        <button id="wppBtn"><a href="https://api.whatsapp.com/send/?phone=5492236887474&text=Hola,%20quería%20información%20acerca%20de%20sus%20productos.%20Me%20redirijo%20de%20la%20pagina%20web." target="_blank"><img src="./assets/img/whatsa.png"/></a></button>
+                        <button id="gmailBtn"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bounzeriog@gmail.com&su=Consulta Mucciarelli&body=Consulta...&bcc=taliercioluis1@gmail.com'" target="_blank"><img src="./assets/img/gmail.png"/></a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,6 +71,7 @@
         </div>
     </footer>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
