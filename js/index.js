@@ -78,13 +78,14 @@ for (let data of arrayMosaicos){
 
 
 let btnConsultas = document.getElementById("btnNav3")
-let popUp = document.getElementById("popUpConsultas")
+//let popUp = document.getElementById("containerPopUp")
+let popUp = document.getElementsByClassName("containerPopUp")[0]
 let btnCierraPopUp = document.getElementById("btnCierraPopUp")
 btnConsultas.onclick = () => {
-    window.scroll({
+    /*window.scroll({
         top: 0,
         behavior: "smooth",
-      });
+      });*/
     popUp.style.visibility=("visible")
 }
 btnCierraPopUp.onclick = () => {
