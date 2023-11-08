@@ -275,7 +275,9 @@ textarea{
     padding: 30px;
 }
 
-
+.containerPopUp{
+    position: none !important;
+}
 
 
 
@@ -285,10 +287,12 @@ textarea{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    box-shadow: rgba(148, 142, 142, 0.59) 4px 7px 5px 0px;
     background-color: #ff6550;
     padding: 1px;
     width: 40vw;
     height: 40vh;
+    font-weight: 550;
     border-radius: 53px 10px 66px 10px;
     -webkit-border-radius: 53px 10px 66px 10px;
     -moz-border-radius: 53px 10px 66px 10px;
