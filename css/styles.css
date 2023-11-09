@@ -130,7 +130,7 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 
 @keyframes animate{
     20%{
-        background-image: url(../assets/img/plegables2.jpg);
+        background-image: url(../assets/img/fondoPresentacionPvc.png);
         background-position: center;
         background-size: cover;
     }
@@ -140,7 +140,7 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
         background-size: cover;
     }
     100%{
-        background-image: url(../assets/img/tecnologia2.jpg);
+        background-image: url(../assets/img/maderas2.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -150,10 +150,22 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
     font-size: 25px;
 }
 
+.divHistoria{
+    display: flex;
+    justify-content: center;
+}
+
 .bloqueHistoria{
-    background-color: rgb(18, 106, 184);
-    width: 100%;
+    width: 90%;
     height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoHistoria{
+    text-align: justify;
+    font-size: 30px;
 }
 
 #divMosaicos{
@@ -271,27 +283,22 @@ textarea{
 }
 
 .textoConsulta{
-    font-size: 20px;
+    font-size: 25px;
     padding: 30px;
+    text-align: center;
 }
 
 .containerPopUp{
     position: none !important;
-}
-
-
-
-.containerPopUp{
     visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: rgba(148, 142, 142, 0.59) 4px 7px 5px 0px;
-    background-color: #ff6550;
-    padding: 1px;
+    background-color: #4fa6ecce;
     width: 40vw;
-    height: 40vh;
+    height: 45vh;
     font-weight: 550;
     border-radius: 53px 10px 66px 10px;
     -webkit-border-radius: 53px 10px 66px 10px;
@@ -299,7 +306,6 @@ textarea{
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
 -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
-
 }
 
 .btnPopUp{
@@ -333,3 +339,76 @@ textarea{
     height: 100%;
 }
 
+.divCardsCatalogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.cardCatalogo{
+    text-align: center;
+    font-size: 25px;
+    width: 40%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 23px 23px 23px 23px;
+-webkit-border-radius: 23px 23px 23px 23px;
+-moz-border-radius: 23px 23px 23px 23px;
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.cardCatalogo h4{
+    padding: 10px;
+}
+
+#card1:hover{
+    animation: expandCard1 1s;
+    transform: translate(5px,2px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandCard1{
+    20%{
+        height: 10vh;
+    }
+
+    60%{
+        height: 15vh;
+        font-size: 27px;
+    }
+
+    100%{
+        height: 40vh;
+        font-size: 30px;
+        background: url(..//assets/img/caratulaPVC.png);
+        background-size:70%;
+    }
+}
+
+#card2:hover{    
+    animation: expandCard2 1s;
+    transform: translate(5px,2px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandCard2{
+    20%{
+        height: 10vh;
+    }
+
+    60%{
+        height: 15vh;
+        font-size: 27px;
+    }
+
+    100%{
+        height: 40vh;
+        font-size: 30px;
+        background-image: url(..//assets/img/fondoPresentacionPvc.png);
+        background-size:cover;
+    }
+}
