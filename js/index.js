@@ -78,12 +78,16 @@ for (let data of arrayMosaicos){
 
 
 let btnConsultas = document.getElementById("btnNav3")
+let mainDiv = document.getElementsByTagName("main")[0];
 //let popUp = document.getElementById("containerPopUp")
 let popUp = document.getElementsByClassName("containerPopUp")[0]
 let btnCierraPopUp = document.getElementById("btnCierraPopUp")
 btnConsultas.onclick = () => {
+    mainDiv.classList.add("popUpOpen")
     popUp.style.visibility=("visible")
+
 }
 btnCierraPopUp.onclick = () => {
+    mainDiv.classList.remove("popUpOpen")
     popUp.style.visibility=("hidden")
 }
