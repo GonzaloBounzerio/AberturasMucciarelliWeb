@@ -42,6 +42,7 @@ for (let data of arrayMosaicos){
                                     <h3>${data.title}</h3>
                                 </div>`
     }
+   
 
     mosaicoNuevo.onmouseleave = () => {
         mosaicoNuevo.innerHTML=`<div class="dataMosaico" id="${data.id}">
