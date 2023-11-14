@@ -51,8 +51,17 @@ for (let data of arrayMosaicos){
                                 </div>`
     }
 
+    mosaicoNuevo.onclick = () =>{
+        let popUpImages = document.createElement("div");
+        let body = document.getElementsByTagName("body")[0];
+        popUpImages.className.ad
+    }
+
     divMosaico.appendChild(mosaicoNuevo)
 }
+
+
+
 
 // const sendContact = async() =>{
     
@@ -92,3 +101,46 @@ btnCierraPopUp.onclick = () => {
     mainDiv.classList.remove("popUpOpen")
     popUp.style.visibility=("hidden")
 }
+
+//CarrouselPopUp Code
+let slideIndex = 0
+
+const showSlides = () =>{
+    let i;
+    let slides = document.getElementsByClassName("imagesCarrousel");
+    for(i=0; i<showSlides.length; i++){
+        slides[i].style.display = "none"
+    }
+    slideIndex++;
+    if(slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex-1].style.display = "block"
+    setTimeout(showSlides,2000);
+}
+//showSlides();
+const nextBtn = document.getElementsByClassName("nextCarrousel")[0];
+const prevBtn = document.getElementsByClassName("prevCarrousel")[0];
+
+
+
+const plusSlides = (i) =>{
+    console.log(slideIndex);
+    //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
+    if(i == -1){
+        if(slideIndex == 0){
+            return;
+        }else slideIndex = slideIndex - 1
+    }else{
+        if(slideIndex == 2) return;
+        else slideIndex = slideIndex + 1;
+    }
+    console.log('index after slide' +slideIndex);
+    //Mover div horizontalmente en eje X para que se corra la imagen
+    //Ademas actualizar el slideIndex
+    //Video youtube https://www.youtube.com/watch?v=wj9txMVExZY
+    //https://www.shecodes.io/athena/5675-creating-a-carousel-with-html-css-javascript
+    let slides = document.getElementsByClassName("inner-carrousel")[0];
+    let move = i * 800
+    slides.scrollLeft += move; 
+}
+prevBtn.addEventListener("click",()=>plusSlides(-1))
+nextBtn.addEventListener("click",()=>plusSlides(1))

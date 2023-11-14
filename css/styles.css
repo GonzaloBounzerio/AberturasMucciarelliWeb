@@ -425,6 +425,41 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 50px 1px #000;
 }
 
+.carrousel{
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: center;
+    /*display: none;*/
+}
+.inner-carrousel{
+    display: flex;
+    overflow: scroll;
+}
+.prevCarrousel:hover, .nextCarrousel:hover{
+    background-color:rgba(0,0,0,0.8);
+}
+.prevCarrousel{
+    position: absolute;
+    left: 0;
+}
+.nextCarrousel{
+    position: absolute;
+    right: 0;
+}
+.imagesCarrousel{
+    -webkit-animation-name:fade; -webkit-animation-duration:1.5s; animation-name:fade; animation-duration:1.5s;
+}
+.imagesCarrousel{
+    width: 100%;
+    width: 800px;
+    object-fit: cover;
+    
+}
+
 @media screen and (max-width:730px){
     .divHeader .titulosHead h1{
         font-size:1.8rem;
