@@ -424,14 +424,17 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     opacity: 1 !important;
     box-shadow: 0px 0px 50px 1px #000;
 }
-
-.popupCarrousel{
+.inactive{
     display: none;
+}
+.popupCarrousel{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 2rem;
+    z-index: 999;
+    width: 80%;
 }
 .carrousel{
     max-width: 800px;
@@ -451,7 +454,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     width: 700px;
 }
 .prevCarrousel:hover, .nextCarrousel:hover{
-    background-color:rgba(0,0,0,0.8);
+    background-color:rgba(0,0,0,0.4);
 }
 .prevCarrousel{
     position: absolute;
@@ -459,6 +462,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     top: 50%;
     margin-left: .5rem;
     font-size: 1.5rem;
+    padding: 0.5rem;
 }
 .nextCarrousel{
     position: absolute;
@@ -466,6 +470,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     top: 50%;
     margin-right: .5rem;
     font-size: 1.5rem;
+    padding: 0.5rem;
 }
 .closeCarrousel{
     position: absolute;
@@ -479,11 +484,12 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
+    object-fit: cover;
+
     -webkit-animation-name:fade; -webkit-animation-duration:1.5s; animation-name:fade; animation-duration:1.5s;
 }
 .imagesCarrousel img{
-    height: 90%;
-    object-fit: cover;
+    max-height: 600px;
     object-position: center center;
     width: 700px;
 }

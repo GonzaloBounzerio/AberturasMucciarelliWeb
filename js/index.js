@@ -45,9 +45,6 @@ const showSlides = () =>{
 }
 //showSlides();
 
-
-
-
 const plusSlides = (i) =>{
     console.log(slideIndex);
     //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
@@ -66,7 +63,6 @@ const plusSlides = (i) =>{
     //https://www.shecodes.io/athena/5675-creating-a-carousel-with-html-css-javascript
     let slides = document.getElementsByClassName("inner-carrousel")[0];
     let width = slides.offsetWidth;
-    console.log(width);
     let move = i * width;
     slides.scrollLeft += move; 
 }
@@ -94,18 +90,21 @@ for (let data of arrayMosaicos){
                                 </div>`
     }
 
-    let popUpImages = document.createElement("div");
-    let body = document.getElementsByTagName("body")[0];
     
-    popUpImages.innerHTML = `<div id="popupCarrousel${data.id}" class="popupCarrousel">
+    let body = document.getElementsByTagName("body")[0];
+
+    mosaicoNuevo.onclick = () =>{
+       
+        let popUpImages = document.createElement("div");
+        popUpImages.innerHTML = `<div id="popupCarrousel${data.id}" class="popupCarrousel">
         
         <div class="carrousel" id="${data.id}carrousel">
 
             <div class="inner-carrousel">
-            
+
                 <div class="imagesCarrousel">
                     <div class="numberText">1 / 3</div>
-                    <img src="./assets/img/headerBackProvisorio.jpg"/>
+                    <img src="./${data.image}"/>
                     <div class="imgCarrouselText">Caption</div>
                 </div>
 
@@ -130,7 +129,7 @@ for (let data of arrayMosaicos){
 
         </div>
     </div>`;
-
+    
     body.appendChild(popUpImages);
 
     const nextBtn = document.getElementsByClassName("nextCarrousel")[0];
@@ -141,16 +140,20 @@ for (let data of arrayMosaicos){
     prevBtn.addEventListener("click",()=>plusSlides(-1))
     nextBtn.addEventListener("click",()=>plusSlides(1))    
 
-    closePopup.addEventListener("click",()=>popUpImages.style.display = "none");
-
-
-    mosaicoNuevo.onclick = () =>{
-       
-        console.log('lol');
-        console.log(popUpCarrousel);
-        popUpCarrousel.style.display = "block"
-    
+    closePopup.addEventListener("click",()=>{
+        slideIndex = 0;
+        popUpCarrousel.remove();
+    });
     }
+    
+   
+
+    
+
+    
+
+
+   
 
     divMosaico.appendChild(mosaicoNuevo)
 }
