@@ -29,6 +29,49 @@ arrayMosaicos.push(item6)
 
 let divMosaico = document.getElementById("divMosaicos")
 
+//CarrouselPopUp Code
+let slideIndex = 0
+
+const showSlides = () =>{
+    let i;
+    let slides = document.getElementsByClassName("imagesCarrousel");
+    for(i=0; i<showSlides.length; i++){
+        slides[i].style.display = "none"
+    }
+    slideIndex++;
+    if(slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex-1].style.display = "block"
+    setTimeout(showSlides,2000);
+}
+//showSlides();
+
+
+
+
+const plusSlides = (i) =>{
+    console.log(slideIndex);
+    //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
+    if(i == -1){
+        if(slideIndex == 0){
+            return;
+        }else slideIndex = slideIndex - 1
+    }else{
+        if(slideIndex == 2) return;
+        else slideIndex = slideIndex + 1;
+    }
+    console.log('index after slide' +slideIndex);
+    //Mover div horizontalmente en eje X para que se corra la imagen
+    //Ademas actualizar el slideIndex
+    //Video youtube https://www.youtube.com/watch?v=wj9txMVExZY
+    //https://www.shecodes.io/athena/5675-creating-a-carousel-with-html-css-javascript
+    let slides = document.getElementsByClassName("inner-carrousel")[0];
+    let width = slides.offsetWidth;
+    console.log(width);
+    let move = i * width;
+    slides.scrollLeft += move; 
+}
+
+
 for (let data of arrayMosaicos){
     let mosaicoNuevo = document.createElement("div")
     mosaicoNuevo.className="mosaicoHover"
@@ -51,41 +94,66 @@ for (let data of arrayMosaicos){
                                 </div>`
     }
 
+    let popUpImages = document.createElement("div");
+    let body = document.getElementsByTagName("body")[0];
+    
+    popUpImages.innerHTML = `<div id="popupCarrousel${data.id}" class="popupCarrousel">
+        
+        <div class="carrousel" id="${data.id}carrousel">
+
+            <div class="inner-carrousel">
+            
+                <div class="imagesCarrousel">
+                    <div class="numberText">1 / 3</div>
+                    <img src="./assets/img/headerBackProvisorio.jpg"/>
+                    <div class="imgCarrouselText">Caption</div>
+                </div>
+
+                <div class="imagesCarrousel">
+                    <div class="numberText">2 / 3</div>
+                    <img src="./assets/img/seguridad2.png"/>
+                    <div class="imgCarrouselText">Caption</div>
+                </div>
+
+                <div class="imagesCarrousel">
+                    <div class="numberText">3 / 3</div>
+                    <img src="./assets/img/ventanas2.jpg"/>
+                    <div class="imgCarrouselText">Caption</div>
+                </div>
+        
+            </div>
+
+            <a class="prevCarrousel">&#10094;</a>
+            <a class="nextCarrousel">&#10095;</a>
+
+            <button class="closeCarrousel" id="closeCarrousel${data.id}">X</button>
+
+        </div>
+    </div>`;
+
+    body.appendChild(popUpImages);
+
+    const nextBtn = document.getElementsByClassName("nextCarrousel")[0];
+    const prevBtn = document.getElementsByClassName("prevCarrousel")[0];
+    const closePopup = document.getElementById(`closeCarrousel${data.id}`);
+    let popUpCarrousel = document.getElementById(`popupCarrousel${data.id}`);
+
+    prevBtn.addEventListener("click",()=>plusSlides(-1))
+    nextBtn.addEventListener("click",()=>plusSlides(1))    
+
+    closePopup.addEventListener("click",()=>popUpImages.style.display = "none");
+
+
     mosaicoNuevo.onclick = () =>{
-        let popUpImages = document.createElement("div");
-        let body = document.getElementsByTagName("body")[0];
-        popUpImages.className.ad
+       
+        console.log('lol');
+        console.log(popUpCarrousel);
+        popUpCarrousel.style.display = "block"
+    
     }
 
     divMosaico.appendChild(mosaicoNuevo)
 }
-
-
-
-
-// const sendContact = async() =>{
-    
-//     let nombre = document.getElementsByName("nombre")[0];
-//     let mail = document.getElementsByName("mail")[0];
-//     let consulta = document.getElementsByName("consulta")[0];
-//     if(!nombre.value || !mail.value || !consulta.value){
-//         [nombre,mail,consulta].forEach((input) =>{
-//             if (!input.value){
-//                 input.style.border = "4px solid red"
-//                 setTimeout(()=>{
-//                     input.style.border = "2px solid black"
-//                 },3000);
-//             } 
-//         });
-//         return;
-//     }
-//     //window.open('https://mail.google.com/mail/u/0/#inbox?compose=new');
-//     //window.open('https://mail.google.com/mail/?view=cm&fs=1&to=bounzeriog@gmail.com&su=Consulta Mucciarelli&body='+consulta.value+'&bcc=taliercioluis1@gmail.com');
-    
-//     console.log(nombre,mail,consulta);
-
-// }
-
 
 let btnConsultas = document.getElementById("btnNav3")
 let mainDiv = document.getElementsByTagName("main")[0];
@@ -102,45 +170,3 @@ btnCierraPopUp.onclick = () => {
     popUp.style.visibility=("hidden")
 }
 
-//CarrouselPopUp Code
-let slideIndex = 0
-
-const showSlides = () =>{
-    let i;
-    let slides = document.getElementsByClassName("imagesCarrousel");
-    for(i=0; i<showSlides.length; i++){
-        slides[i].style.display = "none"
-    }
-    slideIndex++;
-    if(slideIndex > slides.length) slideIndex = 1;
-    slides[slideIndex-1].style.display = "block"
-    setTimeout(showSlides,2000);
-}
-//showSlides();
-const nextBtn = document.getElementsByClassName("nextCarrousel")[0];
-const prevBtn = document.getElementsByClassName("prevCarrousel")[0];
-
-
-
-const plusSlides = (i) =>{
-    console.log(slideIndex);
-    //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
-    if(i == -1){
-        if(slideIndex == 0){
-            return;
-        }else slideIndex = slideIndex - 1
-    }else{
-        if(slideIndex == 2) return;
-        else slideIndex = slideIndex + 1;
-    }
-    console.log('index after slide' +slideIndex);
-    //Mover div horizontalmente en eje X para que se corra la imagen
-    //Ademas actualizar el slideIndex
-    //Video youtube https://www.youtube.com/watch?v=wj9txMVExZY
-    //https://www.shecodes.io/athena/5675-creating-a-carousel-with-html-css-javascript
-    let slides = document.getElementsByClassName("inner-carrousel")[0];
-    let move = i * 800
-    slides.scrollLeft += move; 
-}
-prevBtn.addEventListener("click",()=>plusSlides(-1))
-nextBtn.addEventListener("click",()=>plusSlides(1))

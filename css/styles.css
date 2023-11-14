@@ -425,6 +425,14 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 50px 1px #000;
 }
 
+.popupCarrousel{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2rem;
+}
 .carrousel{
     max-width: 800px;
     position: relative;
@@ -433,11 +441,14 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     flex-wrap: nowrap;
     overflow: hidden;
     justify-content: center;
-    /*display: none;*/
+    padding: 0.5rem;
+    background-color: rgba(228, 13, 13, 0.63);
+    border-radius: 10px;
 }
 .inner-carrousel{
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
+    width: 700px;
 }
 .prevCarrousel:hover, .nextCarrousel:hover{
     background-color:rgba(0,0,0,0.8);
@@ -445,19 +456,36 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 .prevCarrousel{
     position: absolute;
     left: 0;
+    top: 50%;
+    margin-left: .5rem;
+    font-size: 1.5rem;
 }
 .nextCarrousel{
     position: absolute;
     right: 0;
+    top: 50%;
+    margin-right: .5rem;
+    font-size: 1.5rem;
+}
+.closeCarrousel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.25rem 0.25rem 0 0;
 }
 .imagesCarrousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     -webkit-animation-name:fade; -webkit-animation-duration:1.5s; animation-name:fade; animation-duration:1.5s;
 }
-.imagesCarrousel{
-    width: 100%;
-    width: 800px;
+.imagesCarrousel img{
+    height: 90%;
     object-fit: cover;
-    
+    object-position: center center;
+    width: 700px;
 }
 
 @media screen and (max-width:730px){
