@@ -48,23 +48,22 @@ const showSlides = () =>{
 const plusSlides = (i) =>{
     console.log(slideIndex);
     //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
+    let itemsCarrousel = document.getElementsByClassName("imagesCarrousel");
     if(i == -1){
         if(slideIndex == 0){
             return;
-        }else slideIndex = slideIndex - 1
+        }else{
+            itemsCarrousel[slideIndex].classList.add("inactive")            
+            slideIndex = slideIndex - 1
+        } 
     }else{
         if(slideIndex == 2) return;
-        else slideIndex = slideIndex + 1;
+        else{
+            itemsCarrousel[slideIndex].classList.add("inactive")            
+            slideIndex = slideIndex + 1;
+        } 
     }
-    console.log('index after slide' +slideIndex);
-    //Mover div horizontalmente en eje X para que se corra la imagen
-    //Ademas actualizar el slideIndex
-    //Video youtube https://www.youtube.com/watch?v=wj9txMVExZY
-    //https://www.shecodes.io/athena/5675-creating-a-carousel-with-html-css-javascript
-    let slides = document.getElementsByClassName("inner-carrousel")[0];
-    let width = slides.offsetWidth;
-    let move = i * width;
-    slides.scrollLeft += move; 
+    itemsCarrousel[slideIndex].classList.remove("inactive");
 }
 
 
@@ -108,13 +107,13 @@ for (let data of arrayMosaicos){
                     <div class="imgCarrouselText">Caption</div>
                 </div>
 
-                <div class="imagesCarrousel">
+                <div class="imagesCarrousel inactive">
                     <div class="numberText">2 / 3</div>
-                    <img src="./assets/img/seguridad2.png"/>
+                    <img src="./${data.imageHover}"/>
                     <div class="imgCarrouselText">Caption</div>
                 </div>
 
-                <div class="imagesCarrousel">
+                <div class="imagesCarrousel inactive">
                     <div class="numberText">3 / 3</div>
                     <img src="./assets/img/ventanas2.jpg"/>
                     <div class="imgCarrouselText">Caption</div>
@@ -128,32 +127,26 @@ for (let data of arrayMosaicos){
             <button class="closeCarrousel" id="closeCarrousel${data.id}">X</button>
 
         </div>
-    </div>`;
+        </div>`;
     
-    body.appendChild(popUpImages);
+        body.appendChild(popUpImages);
 
-    const nextBtn = document.getElementsByClassName("nextCarrousel")[0];
-    const prevBtn = document.getElementsByClassName("prevCarrousel")[0];
-    const closePopup = document.getElementById(`closeCarrousel${data.id}`);
-    let popUpCarrousel = document.getElementById(`popupCarrousel${data.id}`);
+        mainDiv.style.opacity = 0.4;
+        const nextBtn = document.getElementsByClassName("nextCarrousel")[0];
+        const prevBtn = document.getElementsByClassName("prevCarrousel")[0];
+        const closePopup = document.getElementById(`closeCarrousel${data.id}`);
+        let popUpCarrousel = document.getElementById(`popupCarrousel${data.id}`);
 
-    prevBtn.addEventListener("click",()=>plusSlides(-1))
-    nextBtn.addEventListener("click",()=>plusSlides(1))    
+        prevBtn.addEventListener("click",()=>plusSlides(-1))
+        nextBtn.addEventListener("click",()=>plusSlides(1))    
 
-    closePopup.addEventListener("click",()=>{
-        slideIndex = 0;
-        popUpCarrousel.remove();
-    });
+        closePopup.addEventListener("click",()=>{
+            slideIndex = 0;
+            mainDiv.style.opacity = 1;
+            //mainDiv.style.pointerEvents = all;
+            popUpCarrousel.remove();
+        });
     }
-    
-   
-
-    
-
-    
-
-
-   
 
     divMosaico.appendChild(mosaicoNuevo)
 }
