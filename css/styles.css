@@ -197,6 +197,7 @@ box-shadow: 3px 5px 17px 0px rgba(0,0,0,0.64);
 }
 
 .mosaicoHover:hover{
+    cursor: pointer;
     transform: rotate(2deg);
 	perspective:(1000px);
 	scale:(1.1);
@@ -294,7 +295,7 @@ textarea{
 }
 
 .textoConsulta{
-    font-size: 25px;
+    font-size: 20px;
     padding: 30px;
     text-align: center;
 }
@@ -377,7 +378,7 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 #card1:hover{
-    animation: expandCard1 1s;
+    animation: expandCard1 0.5s;
     transform: translate(5px,2px);
     animation-fill-mode: forwards;
 }
@@ -388,20 +389,21 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
 
     60%{
-        height: 15vh;
+        height: 25vh;
         font-size: 27px;
     }
 
     100%{
         height: 40vh;
         font-size: 30px;
+        font-style: italic;
         background: url(..//assets/img/caratulaPVC.png);
         background-size:70%;
     }
 }
 
 #card2:hover{    
-    animation: expandCard2 1s;
+    animation: expandCard2 0.5s;
     transform: translate(5px,2px);
     animation-fill-mode: forwards;
 }
@@ -412,13 +414,14 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
 
     60%{
-        height: 15vh;
+        height: 25vh;
         font-size: 27px;
     }
 
     100%{
         height: 40vh;
         font-size: 30px;
+        font-style: italic;
         background-image: url(..//assets/img/fondoPresentacionPvc.png);
         background-size:cover;
     }
@@ -555,13 +558,6 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     .subtitulo{
         padding-right: 0.25rem;
     }
-
-    .divProd{
-
-    }
-    .divProd #divMosaicos{
-    }
-    
   
     .divHistoria{
         margin-top: 20px;

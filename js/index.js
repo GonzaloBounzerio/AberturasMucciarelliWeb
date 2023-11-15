@@ -46,7 +46,7 @@ const showSlides = () =>{
 //showSlides();
 
 const plusSlides = (i) =>{
-    console.log(slideIndex);
+    // console.log(slideIndex);
     //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
     let itemsCarrousel = document.getElementsByClassName("imagesCarrousel");
     if(i == -1){
