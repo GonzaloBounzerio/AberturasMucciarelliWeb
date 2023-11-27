@@ -10,6 +10,7 @@ body{
     background-color: aliceblue;
     margin: 0 75px;
     font-family: 'Agdasima', sans-serif;
+	scroll-behavior: smooth;
 }
 
 a{
