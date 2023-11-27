@@ -2,20 +2,21 @@
 window.addEventListener("hashchange", function() { scrollBy(0, -100) })
 
 class dataMosaico {
-    constructor(id,title,image,imageHover){
+    constructor(id,title,image,imageHover,imageExtra){
         this.id = id;
         this.title = title;
         this.image = image;
         this.imageHover = imageHover;
+        this.imageExtra = imageExtra;
     }
 }
 
-const item1 = new dataMosaico(1,"Ventanas de aluminio","assets/img/ventanas1.jpg","assets/img/ventanas2.jpg")
-const item2 = new dataMosaico(2,"Puertas de aluminio","assets/img/puertas1.jpg","assets/img/puertas2.jpg")
-const item3 = new dataMosaico(3,"Redes de protección","assets/img/redes1.jpg","assets/img/redes2.jpg")
-const item4 = new dataMosaico(4,"Seguridad","assets/img/seguridad1.jpg","assets/img/seguridad2.png")
-const item5 = new dataMosaico(5,"Aberturas de madera","assets/img/maderas1.jpg","assets/img/maderas2.jpg")
-const item6 = new dataMosaico(6,"Y mucho más...","assets/img/plegables1.jpg","assets/img/plegables2.jpg")
+const item1 = new dataMosaico(1,"Ventanas de aluminio","assets/img/ventanas1.jpg","assets/img/ventanas2.jpg","assets/img/ventanas3.jpg")
+const item2 = new dataMosaico(2,"Puertas de aluminio","assets/img/puertas1.jpg","assets/img/puertas2.jpg","assets/img/puertas3.jpg")
+const item3 = new dataMosaico(3,"Redes de protección","assets/img/redes1.jpg","assets/img/redes2.jpg","assets/img/redes3.jpg")
+const item4 = new dataMosaico(4,"Seguridad","assets/img/seguridad1.jpg","assets/img/seguridad2.png","assets/img/seguridad3.jpeg")
+const item5 = new dataMosaico(5,"Aberturas de madera","assets/img/maderas1.jpg","assets/img/maderas2.jpg","assets/img/maderas3.jpeg")
+const item6 = new dataMosaico(6,"Y mucho más...","assets/img/plegables1.jpg","assets/img/plegables2.jpg","assets/img/plegables3.jpeg")
 
 let arrayMosaicos=[]
 
@@ -104,19 +105,19 @@ for (let data of arrayMosaicos){
                 <div class="imagesCarrousel">
                     <div class="numberText">1 / 3</div>
                     <img src="./${data.image}"/>
-                    <div class="imgCarrouselText">Caption</div>
+                    <div class="imgCarrouselText">${data.title}</div>
                 </div>
 
                 <div class="imagesCarrousel inactive">
                     <div class="numberText">2 / 3</div>
                     <img src="./${data.imageHover}"/>
-                    <div class="imgCarrouselText">Caption</div>
+                    <div class="imgCarrouselText">${data.title}</div>
                 </div>
 
                 <div class="imagesCarrousel inactive">
                     <div class="numberText">3 / 3</div>
-                    <img src="./assets/img/ventanas2.jpg"/>
-                    <div class="imgCarrouselText">Caption</div>
+                    <img src="./${data.imageExtra}"/>
+                    <div class="imgCarrouselText">${data.title}</div>
                 </div>
         
             </div>
