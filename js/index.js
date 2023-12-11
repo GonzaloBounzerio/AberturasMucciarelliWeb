@@ -167,3 +167,10 @@ btnCierraPopUp.onclick = () => {
     popUp.style.visibility=("hidden")
 }
 
+let mobileButton = document.getElementById("mobileButton");
+let navHead = document.getElementsByClassName("navHead")[0];
+
+mobileButton.addEventListener("click",()=>{
+    console.log('click');
+    navHead.classList.toggle("inactive");
+})
