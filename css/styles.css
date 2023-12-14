@@ -435,6 +435,15 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
 }
 
+@media screen and (max-width:1000px){
+    #card1:hover{
+        animation: none;
+    }    
+    #card2:hover{
+        animation: none;
+    }
+}
+
 .popUpOpen {
     opacity: 0.4 !important;
 }
