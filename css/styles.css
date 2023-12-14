@@ -464,11 +464,15 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     padding: 0.5rem;
     background-color: rgba(228, 13, 13, 0.63);
     border-radius: 10px;
-    height: 600px;
+    height: 90dvh;
+}
+.carrousel a{
+    cursor: pointer;
 }
 .inner-carrousel{
     display: flex;
     overflow: hidden;
+    justify-content: center;
     width: 700px;
 }
 .prevCarrousel:hover, .nextCarrousel:hover{
@@ -503,15 +507,30 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     flex-direction: column;
     align-items: center;
     object-fit: cover;
-    
+    justify-content: center;
     -webkit-animation-name:fade; -webkit-animation-duration:1.5s; animation-name:fade; animation-duration:1.5s;
 }
 .imagesCarrousel img{
     max-height: 90%;
     object-position: center center;
+    object-fit: contain;
     scroll-behavior: smooth;
-    width: 700px;
+    width: 100%;
 }
+.carrousel .descriptionImg{
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+  .inner-carrousel .inactive{
+        display: none;
+        pointer-events: none;
+    }
 
 @media screen and (max-width:730px){
     .divHeader .titulosHead h1{
@@ -596,6 +615,9 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
     #mobileButton{
         z-index: 1001;
+    }
+    .carrousel{
+        height: 90dvh;
     }
     .navHead{
         display: flex;

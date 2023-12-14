@@ -47,9 +47,9 @@ const showSlides = () =>{
 //showSlides();
 
 const plusSlides = (i) =>{
-    // console.log(slideIndex);
     //Controla que no se intente mover mas de las imagenes permitidas, ya que hay 3 por popup
     let itemsCarrousel = document.getElementsByClassName("imagesCarrousel");
+    console.log(i);
     if(i == -1){
         if(slideIndex == 0){
             return;
@@ -105,22 +105,21 @@ for (let data of arrayMosaicos){
                 <div class="imagesCarrousel">
                     <div class="numberText">1 / 3</div>
                     <img src="./${data.image}"/>
-                    <div class="imgCarrouselText">${data.title}</div>
                 </div>
 
                 <div class="imagesCarrousel inactive">
                     <div class="numberText">2 / 3</div>
                     <img src="./${data.imageHover}"/>
-                    <div class="imgCarrouselText">${data.title}</div>
                 </div>
 
                 <div class="imagesCarrousel inactive">
                     <div class="numberText">3 / 3</div>
                     <img src="./${data.imageExtra}"/>
-                    <div class="imgCarrouselText">${data.title}</div>
                 </div>
         
             </div>
+
+            <div class="descriptionImg">${data.title}</div>
 
             <a class="prevCarrousel">&#10094;</a>
             <a class="nextCarrousel">&#10095;</a>
