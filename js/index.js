@@ -156,18 +156,18 @@ let mainDiv = document.getElementsByTagName("main")[0];
 //let popUp = document.getElementById("containerPopUp")
 let popUp = document.getElementsByClassName("containerPopUp")[0]
 let btnCierraPopUp = document.getElementById("btnCierraPopUp")
+let mobileButton = document.getElementById("mobileButton");
+let navHead = document.getElementsByClassName("navHead")[0];
+
 btnConsultas.onclick = () => {
     mainDiv.classList.add("popUpOpen")
     popUp.style.visibility=("visible")
-
+    navHead.classList.toggle("inactive");
 }
 btnCierraPopUp.onclick = () => {
     mainDiv.classList.remove("popUpOpen")
     popUp.style.visibility=("hidden")
 }
-
-let mobileButton = document.getElementById("mobileButton");
-let navHead = document.getElementsByClassName("navHead")[0];
 
 mobileButton.addEventListener("click",()=>{
     console.log('click');
