@@ -318,7 +318,7 @@ textarea{
     box-shadow: rgba(148, 142, 142, 0.59) 4px 7px 5px 0px;
     background-color: #4fa6ecce;
     width: 40vw;
-    height: 45vh;
+    height: fit-content;
     font-weight: 550;
     border-radius: 53px 10px 66px 10px;
     -webkit-border-radius: 53px 10px 66px 10px;
@@ -586,8 +586,31 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 @media screen and (max-width:700px){
     .inactive{
-        display: none;
-        pointer-events: none;
+        display: none !important;
+        pointer-events: none !important;
+    }
+    .mobile{
+        display: flex;
+        pointer-events: all;
+        z-index: 1000;
+    }
+    #mobileButton{
+        z-index: 1001;
+    }
+    .navHead{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: flex-start;
+        gap: 3rem;
+        top: 0;
+        right: 0;
+        height: 100dvh;
+        padding: 2rem 1rem;
+        z-index: 1000;
+        box-shadow: 2px 2px 2px black;
+        background-color: rgba(255, 255, 0, 0.795);
+        margin-top: 0;
     }
 }
 @media screen and (max-width:500px){
@@ -605,7 +628,8 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         font-size:1.5rem;
     }
     .divHeader .navHead{
-        gap: 0.5rem;
+        gap: 2rem;
+        padding-top: 6.5rem;
     }
     .divHeader .navHead .btnNav{
         font-size: 1rem;
@@ -762,8 +786,4 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         height: 100%;
     }
 
-}
-
-.inactive{
-    display: none;
 }
